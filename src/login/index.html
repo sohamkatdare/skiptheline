@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pastel">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="/css/output.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@2.42.1/dist/full.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="src/style.css">
+      <title>SkipTheLine</title>
+  </head>
+  <body class="min-h-screen bg-slate-100">
+
+    <div class="navbar bg-primary text-primary-content">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="/">Skip The Line</a>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal p-0">
+          <li><a class="hover" href="/deli/">Deli</a></li>
+          <li><a class="hover" href="/grab-and-go/">Grab & Go Co</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="absolute h-screen w-screen">
+      <div class="blur-circle h-10 w-10 t-10"></div>
+    </div>
+
+    <div class="grid h-[90vh] w-full place-content-center">
+      <div class="rounded-md bg-white drop-shadow-lg outline-2 outline-primary outline-offset-2 min-w-[35%]">
+        <h1 class="font-bold text-4xl px-10 mt-5">Sign In</h1>
+        <form class="m-10">
+          <div class="form-control my-3">
+            <label class="input-group">
+              <span>First Name</span>
+              <input type="text" placeholder="Beel" class="input input-bordered" />
+            </label>
+          </div>
+      
+          <div class="form-control">
+            <label class="input-group my-3">
+              <span>Last Name</span>
+              <input type="text" placeholder="Beel" class="input input-bordered" />
+            </label>
+          </div>
+      
+          <div class="form-control my-3">
+            <label class="input-group">
+              <span>Student ID</span>
+              <input type="text" placeholder="Beel" class="input input-bordered" />
+            </label>
+          </div>
+          <br>
+          <br>
+          <div class="text-right">
+            <button class="btn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </body>
+
+</html>
