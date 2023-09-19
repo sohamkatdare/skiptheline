@@ -11,46 +11,7 @@
     </head>
     <body>
 
-        <div class="navbar bg-primary text-primary-content">
-            <div class="flex-1">
-              <a class="btn btn-ghost normal-case text-xl" href="index.html">Skip The Line</a>
-            </div>
-            <div class="flex-1 grid grid-flow-col gap-5 text-center auto-cols-max">
-              <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span class="countdown font-mono text-xl">
-                  <span style="--value:15;"></span>
-                </span>
-                days
-              </div> 
-              <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span class="countdown font-mono text-xl">
-                  <span style="--value:10;"></span>
-                </span>
-                hrs
-              </div> 
-              <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span class="countdown font-mono text-xl">
-                  <span style="--value:24;"></span>
-                </span>
-                min
-              </div> 
-              <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span class="countdown font-mono text-xl">
-                  <span style="--value:45;"></span>
-                </span>
-                sec
-              </div>
-            </div>
-            <div class="flex-none">
-              <ul class="menu menu-horizontal p-0">
-                <li><a class="hover rounded-full mr-2" href="/stuco/">StuCo</a></li>
-                <li><a class="hover rounded-full mr-2" href="/deli/">Deli</a></li>
-                <li><a class="hover rounded-full mr-2" href="/grab-and-go/">Grab & GoCo</a></li>
-                <li><a class="btn btn-outline rounded-full mr-2" href="/register/">Sign Up</a></li>
-                <li><a class="btn rounded-full ml-2" href="/login/">Log In</a></li>
-              </ul>
-            </div>
-          </div>
+       <navbar-component></navbar-component>
 
         
 
@@ -81,5 +42,6 @@
             
 
         </footer>
+        <script type="module" src="../components.js"></script>
     </body>
 </html>

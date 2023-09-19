@@ -12,17 +12,7 @@
   </head>
   <body class="min-h-screen bg-slate-100">
 
-    <div class="navbar bg-primary text-primary-content">
-      <div class="flex-1">
-        <a class="btn btn-ghost normal-case text-xl" href="/">Skip The Line</a>
-      </div>
-      <div class="flex-none">
-        <ul class="menu menu-horizontal p-0">
-          <li><a class="hover" href="/deli/">Deli</a></li>
-          <li><a class="hover" href="/grab-and-go/">Grab & Go Co</a></li>
-        </ul>
-      </div>
-    </div>
+   <navbar-component></navbar-component>
 
     <div class="absolute h-screen w-screen">
       <div class="blur-circle h-10 w-10 t-10"></div>
@@ -35,21 +25,21 @@
           <div class="form-control my-3">
             <label class="input-group">
               <span>First Name</span>
-              <input type="text" placeholder="Beel" class="input input-bordered" />
+              <input type="text" placeholder="" class="input input-bordered" />
             </label>
           </div>
       
           <div class="form-control">
             <label class="input-group my-3">
               <span>Last Name</span>
-              <input type="text" placeholder="Beel" class="input input-bordered" />
+              <input type="text" placeholder="" class="input input-bordered" />
             </label>
           </div>
       
           <div class="form-control my-3">
             <label class="input-group">
               <span>Student ID</span>
-              <input type="text" placeholder="Beel" class="input input-bordered" />
+              <input type="text" placeholder="" class="input input-bordered" />
             </label>
           </div>
           <br>
@@ -60,6 +50,8 @@
         </form>
       </div>
     </div>
+
+    <script type="module" src="../components.js"></script>
 
   </body>
 

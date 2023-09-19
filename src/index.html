@@ -1,91 +1,108 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="pastel">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="/css/output.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.42.1/dist/full.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="style.css">
-        <title>SkipTheLine</title>
-    </head>
-    <body class="min-h-screen">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/css/output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.42.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+    <title>SkipTheLine</title>
+</head>
+<body class="min-h-screen">
 
-        <div class="navbar fixed bg-primary text-primary-content">
-            <div class="flex-1">
-              <a class="btn btn-ghost normal-case text-xl" href="index.html">Skip The Line</a>
+    <navbar-component></navbar-component>
+
+    <div class="grid grid-cols-12 grid-rows-2 gap-4 grid-flow-col h-screen w-full p-20">
+        <div class=" mt-0 col-start-1 col-end-7 rounded-lg row-span-2 cursor-pointer lg:saturate-50 hover:lg:saturate-100 transition-all ease-in-out duration-500 bg-gray-800">
+            <div class="pl-5 pt-5">
+                <h1 class="text-5xl font-bold text-white">Skip the Deli Line!</h1>
+                <p class="py-6 text-white ">Online ordering for the school cafeteria is now at your fingertips! Just order what you want, enter your PIN, and pick your food up. Begin ordering with no wait time today.</p>
+                <div class="grid grid-cols-12 grid-rows-2 grid-flow-col h-screen w-full">
+                    <div class="col-start-1 col-end-1 row-span-1" id="cafstart">
+                        <a href="deli/index.html">
+                            <button class="btn btn-primary text-white mt-2">Get Started</button>
+                        </a>
+                    </div>
+                    <div class="col-start-4 col-end-12 row-span-1" id="cafclock">
+                      <div class="flex-1 grid grid-flow-col gap-5 text-center auto-cols-max">
+                          <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                              <span id="hours" class="countdown font-mono text-xl">0</span>
+                              hrs
+                          </div> 
+                          <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                              <span id="minutes" class="countdown font-mono text-xl">0</span>
+                              min
+                          </div> 
+                          <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                              <span id="seconds" class="countdown font-mono text-xl">0</span>
+                              sec
+                          </div>
+                      </div>
+                    </div>
+                </div>
             </div>
-            <div class="flex-none">
-              <ul class="menu menu-horizontal p-0">
-                <li><a class="hover" href="/deli/">Deli</a></li>
-                <li><a class="hover" href="/grab-and-go/">Grab & Go Co</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="grid grid-cols-12 grid-rows-2 gap-4 grid-flow-col h-screen w-full p-20">
-            <div class=" mt-0 col-start-1 col-end-7 rounded-lg row-span-2 cursor-pointer lg:saturate-0 hover:saturate-100 saturate-100 transition-all duration-500" style="background-image: url('https://previews.123rf.com/images/yurysevryuk/yurysevryuk1810/yurysevryuk181000103/112528045-vertical-food-banner-delicious-toasts-with-grilled-cheese-quail-eggs-cream-cheese-and-nuts-author-s-.jpg');">
-              <div class="pl-5 pt-5">
-                <h1 class="text-5xl font-bold ">Skip the Stuco Line!</h1>
-                <p class="py-6 ">Online ordering for the school cafeteria is now at your fingertips! Just order what you want, enter your PIN, and pick your food up. Begin ordering with no wait time today.</p>
-                <a href="login/index.html">
-                  <button class="btn btn-primary text-white">Get Started</button>
+        </div>
+        <div class="col-start-7 col-end-13 row-span-1 mt-0 rounded-lg duration-500 lg:saturate-50 hover:lg:saturate-100 transition-all ease-in-out bg-gray-800">
+            <div class="pl-5 pt-5">
+                <h1 class="text-5xl font-bold text-white">Cafeteria Menu!</h1>
+                <p class="py-6 text-white">Begin ordering with no wait time for the deli.</p>
+                <a href="menu/index.html">
+                    <button class="btn btn-primary">Order Now</button>
                 </a>
-              </div>
-            </div>
-            <div class="col-start-7 col-end-13 row-span-1 mt-0 rounded-lg duration-300 lg:saturate-0 hover:saturate-100 saturate-100 transition-all ease-in-out" style="background-image: url('https://img.buzzfeed.com/buzzfeed-static/static/2021-08/12/5/asset/3bc6841bc2c2/sub-buzz-3367-1628746789-16.jpg');">
-              <div class="pl-5 pt-5">
-                <h1 class="text-5xl font-bold">Deli!</h1>
-                <p class="py-6">Begin ordering with no wait time for the deli.</p>
-                <a href="deli/index.html">
-                  <button class="btn btn-primary">Order Now</button>
-                </a>
-              </div>  
-            </div>
-            
-            <div class="col-start-7 col-end-10 row-span-1 mt-0 rounded-lg duration-300 lg:saturate-0 hover:saturate-100 saturate-100 transition-all ease-in-out" style="background-image: url('https://previews.123rf.com/images/yurysevryuk/yurysevryuk1810/yurysevryuk181000103/112528045-vertical-food-banner-delicious-toasts-with-grilled-cheese-quail-eggs-cream-cheese-and-nuts-author-s-.jpg');">
-              <div class="pl-5 pt-5">
-                <h1 class="text-5xl font-bold">Grab and Go Co!</h1>
-                <p class="py-6">Get snacks and drinks with not wait.</p>
+            </div>  
+        </div>
+        <div class="col-start-7 col-end-13 row-span-1 mt-0 rounded-lg duration-500 lg:saturate-50 hover:lg:saturate-100 transition-all ease-in-out bg-gray-800">
+            <div class="pl-5 pt-5">
+                <h1 class="text-5xl font-bold text-white">Grab&GoCo Menu!</h1>
+                <p class="py-6 text-white">Begin ordering with no wait time for the deli.</p>
                 <a href="grab-and-go/index.html">
-                  <button class="btn btn-primary">Order Now</button>
+                    <button class="btn btn-primary">Order Now</button>
                 </a>
-              </div>
-            </div>
-            
-            <div class="col-start-10 col-end-13 row-span-1  mt-0 rounded-lg duration-300 lg:saturate-0 hover:saturate-100 saturate-100 transition-all ease-in-out" style="background-image: url('https://previews.123rf.com/images/yurysevryuk/yurysevryuk1810/yurysevryuk181000103/112528045-vertical-food-banner-delicious-toasts-with-grilled-cheese-quail-eggs-cream-cheese-and-nuts-author-s-.jpg');">
-              <div class="pl-5 pt-5">
-                <h1 class="text-5xl font-bold">Menus!</h1>
-                <p class="py-6">Check what's avaliable at the deli, grab and go co and stuco in no time!</p>
-                <a href="stuco/index.html">
-                  <button class="btn btn-primary">Check</button>
-                </a>
-              </div>
-            </div>
+            </div>  
+        </div>
+    </div>
 
-          </div>
-            
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const cafClock = document.getElementById('cafclock');
+          const hoursElement = document.getElementById('hours');
+          const minutesElement = document.getElementById('minutes');
+          const secondsElement = document.getElementById('seconds');
 
+          function updateClock() {
+              const now = new Date();
+              const hours = now.getHours();
+              const minutes = now.getMinutes();
+              const seconds = now.getSeconds();
 
-            
-          </div>
-          
-        <!-- <div class = "home"></div>
-          <div class = "row contaner"></div>
-            <div class = "col"></div>
-             <div class = "faster"></div>
-               <div class = "image d-flex"></div>
-                <img src = "./images/french-fries.svg" alt="" />
-               </div>
-            </div> -->
+              if (hours >= 6 && hours < 9) {
+                  const remainingHours = 8 - hours;
+                  const remainingMinutes = 59 - minutes;
+                  const remainingSeconds = 59 - seconds;
 
-        <main> 
-            
-        </main>
-        <footer>
-            
+                  hoursElement.textContent = remainingHours;
+                  minutesElement.textContent = remainingMinutes;
+                  secondsElement.textContent = remainingSeconds;
+              } else {
+                  hoursElement.textContent = '0';
+                  minutesElement.textContent = '0';
+                  secondsElement.textContent = '0';
+              }
+          }
 
-        </footer>
-    </body>
+          setInterval(updateClock, 1000);
+          updateClock();
+      });
+    </script>
+
+    <main> 
+        <!-- Your main content here -->
+    </main>
+    <footer>
+        <!-- Your footer content here -->
+    </footer>
+    <script type="module" src="./components.js"></script>
+</body>
 </html>
