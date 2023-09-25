@@ -11,10 +11,11 @@
       rel="stylesheet"
       type="text/css"
     />
+
     <title>SkipTheLine</title>
   </head>
   <body>
-    <div class="navbar bg-primary text-primary-content">
+    <nav class="navbar bg-primary sticky top-0 text-primary-content transition-all duration-700">
       <div class="flex-1">
         <a class="btn btn-ghost normal-case text-xl" href="/index.html"
           >Skip The Line</a
@@ -25,15 +26,15 @@
         <div class="col-start-4 col-end-12 row-span-1" id="cafclock">
           <div class="flex-1 grid grid-flow-col gap-5 text-center auto-cols-max">
               <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                  <span id="hours" class="countdown font-mono text-xl">0</span>
+                  <span id="hours" class="countdown text-center font-mono text-xl">0</span>
                   hrs
               </div> 
               <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                  <span id="minutes" class="countdown font-mono text-xl">0</span>
+                  <span id="minutes" class="countdown text-center font-mono text-xl">0</span>
                   min
               </div> 
               <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                  <span id="seconds" class="countdown font-mono text-xl">0</span>
+                  <span id="seconds" class="countdown text-center font-mono text-xl">0</span>
                   sec
               </div>
           </div>
@@ -46,21 +47,21 @@
           <li><a class="hover" href="/grab-and-go/">Grab & GoCo</a></li>
         </ul>
       </div>
-    </div>
+    </nav>
+    <div class="spot -translate-y-[3.25rem]"></div>
 
     <main class="text-center">
-      <strong class="text-4xl py-5">Order from the Deli here</strong>
-      <br />
-      <br />
-      <br />
+
       <form name="main">
         <strong class="text-4xl py-5">Breads</strong>
-        <ul class="p-5 grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4">
+        <ul class="p-5 grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4 ">
           <li>
-            <input type="radio" id="rye" name="bread" value="rye" class="hidden peer/bread"/>
-            <label for="rye" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/bread:border-slate-600 peer-checked/bread:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
+            <input type="radio" id="Panini" name="bread" value="Panini" class="hidden peer/bread"/>
+            <label for="Panini" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/bread:border-slate-600 peer-checked/bread:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
               <div class="block">
-                <div class="w-full text-lg font-semibold">Rye</div>
+                <div class="w-full text-lg font-semibold">Panini
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded  bread">+$4.85</span>
+                </div>
               </div>
             </label>
           </li>
@@ -68,74 +69,135 @@
             <input type="radio" id="texas-toast" name="bread" value="texas-toast" class="hidden peer/bread"/>
             <label for="texas-toast" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/bread:border-slate-600 peer-checked/bread:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
               <div class="block">
-                <div class="w-full text-lg font-semibold">Texas Toast</div>
+                <div class="w-full text-lg font-semibold">Texas Toast
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded  bread">+$4.15</span>
+                </div>
               </div>
             </label>
           </li>
           <li>
-            <input type="radio" id="ciabatta" name="bread" value="ciabatta" class="hidden peer/bread"/>
-            <label for="ciabatta" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/bread:border-slate-600 peer-checked/bread:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+            <input type="radio" id="Gluten-Free_Bread" name="bread" value="Gluten-Free_Bread" class="hidden peer/bread"/>
+            <label for="Gluten-Free_Bread" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/bread:border-slate-600 peer-checked/bread:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
               <div class="block">
-                <div class="w-full text-lg font-semibold">Ciabatta</div>
+                <div class="w-full text-lg font-semibold">Gluten-Free Bread
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded  bread">+$4.15</span>
+                </div>
               </div>
             </label>
           </li>
           <li>
-            <input type="radio" id="tortilla" name="bread" value="tortilla" class="hidden peer/bread"/>
-            <label for="tortilla" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/bread:border-slate-600 peer-checked/bread:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+            <input type="radio" id="Wrap" name="bread" value="Wrap" class="hidden peer/bread"/>
+            <label for="Wrap" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/bread:border-slate-600 peer-checked/bread:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
               <div class="block">
-                <div class="w-full text-lg font-semibold">Tortilla Wrap</div>
+                <div class="w-full text-lg font-semibold">Wrap
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded  bread">+$4.15</span>
+                </div>
               </div>
             </label>
           </li>
         </ul>
-        <strong class="text-4xl py-5">Sauces</strong>
-        <ul class="p-5 grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4">
+
+        <strong class="text-4xl py-5">Cheese</strong>
+        <ul class="p-5 grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4 ">
           <li>
-            <input type="radio" id="mayo" name="sauce" value="mayo" class="hidden peer/sauce"/>
-            <label for="mayo" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
+            <input type="checkbox" id="Swiss" name="cheese" value="Swiss" class="hidden peer/cheese"/>
+            <label for="Swiss" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/cheese:border-slate-600 peer-checked/cheese:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Swiss
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden cheese">+$0.50</span>
+                </div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="Cheddar" name="cheese" value="Cheddar" class="hidden peer/cheese"/>
+            <label for="Cheddar" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/cheese:border-slate-600 peer-checked/cheese:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Cheddar
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden cheese">+$0.50</span>
+                </div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="Pepper_Jack" name="cheese" value="Pepper_Jack" class="hidden peer/cheese"/>
+            <label for="Pepper_Jack" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/cheese:border-slate-600 peer-checked/cheese:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Pepper Jack
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden cheese">+$0.50</span>
+                </div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="Mozarella" name="cheese" value="Mozarella" class="hidden peer/cheese"/>
+            <label for="Mozarella" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/cheese:border-slate-600 peer-checked/cheese:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Mozarella
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden cheese">+$0.50</span>
+                </div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="American" name="cheese" value="American" class="hidden peer/cheese"/>
+            <label for="American" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/cheese:border-slate-600 peer-checked/cheese:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">American
+                  <span class="bg-gray-100 tex meatt-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden cheese">+$0.50</span>
+                </div>
+              </div>
+            </label>
+          </li>
+        </ul>
+
+        <strong class="text-4xl py-5">Sauces</strong>
+        <ul class="p-5 grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4 ">
+          <li>
+            <input type="radio" id="Mayo" name="sauce" value="Mayo" class="hidden peer/sauce"/>
+            <label for="Mayo" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
               <div class="block">
                 <div class="w-full text-lg font-semibold">Mayo</div>
               </div>
             </label>
           </li>
           <li>
-            <input type="checkbox" id="oil" name="sauce" value="oil" class="hidden peer/sauce"/>
-            <label for="oil" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
+            <input type="checkbox" id="Oil" name="sauce" value="Oil" class="hidden peer/sauce"/>
+            <label for="Oil" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
               <div class="block">
                 <div class="w-full text-lg font-semibold">Oil</div>
               </div>
             </label>
           </li>
           <li>
-            <input type="checkbox" id="marinara" name="sauce" value="marinara" class="hidden peer/sauce"/>
-            <label for="marinara" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+            <input type="checkbox" id="Barbecue" name="sauce" value="Barbecue" class="hidden peer/sauce"/>
+            <label for="Barbecue" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
               <div class="block">
-                <div class="w-full text-lg font-semibold">Marinara</div>
+                <div class="w-full text-lg font-semibold">Barbecue Sauce</div>
               </div>
             </label>
           </li>
           <li>
-            <input type="checkbox" id="ketchup" name="sauce" value="ketchup" class="hidden peer/sauce"/>
-            <label for="ketchup" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+            <input type="checkbox" id="Red_Wine_Vinegar" name="sauce" value="Red_Wine_Vinegar" class="hidden peer/sauce"/>
+            <label for="Red_Wine_Vinegar" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
               <div class="block">
-                <div class="w-full text-lg font-semibold">Ketchup</div>
+                <div class="w-full text-lg font-semibold">Red Wine Vinegar</div>
               </div>
             </label>
           </li>
           <li>
-            <input type="checkbox" id="hot-sauce" name="sauce" value="hot-sauce" class="hidden peer/sauce"/>
-            <label for="hot-sauce" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
+            <input type="checkbox" id="Buffalo_Sauce" name="sauce" value="Buffalo_Sauce" class="hidden peer/sauce"/>
+            <label for="Buffalo_Sauce" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
               <div class="block">
-                <div class="w-full text-lg font-semibold">Hot Sauce</div>
+                <div class="w-full text-lg font-semibold">Buffalo Sauce</div>
               </div>
             </label>
           </li>
           <li>
-            <input type="checkbox" id="avocado" name="sauce" value="avocado" class="hidden peer/sauce"/>
-            <label for="avocado" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
+            <input type="checkbox" id="Mustard" name="sauce" value="Mustard" class="hidden peer/sauce"/>
+            <label for="Mustard" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
               <div class="block">
-                <div class="w-full text-lg font-semibold">Avocado</div>
+                <div class="w-full text-lg font-semibold">Mustard</div>
               </div>
             </label>
           </li>
@@ -148,84 +210,86 @@
             </label>
           </li>
           <li>
-            <input type="checkbox" id="thousand-island" name="sauce" value="thousand-island" class="hidden peer/sauce"/>
-            <label for="thousand-island" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+            <input type="checkbox" id="Italian_Dressing" name="sauce" value="Italian_Dressing" class="hidden peer/sauce"/>
+            <label for="Italian_Dressing" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/sauce:border-slate-600 peer-checked/sauce:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
               <div class="block">
-                <div class="w-full text-lg font-semibold">Thousand Island</div>
+                <div class="w-full text-lg font-semibold">Italian Dressing</div>
               </div>
             </label>
           </li>
         </ul>
 
-        <strong class="text-4xl py-5">Cheese</strong>
-        <ul class="p-5 grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4">
-          <li>
-            <input type="checkbox" id="Swiss" name="cheese" value="Swiss" class="hidden peer/cheese"/>
-            <label for="Swiss" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/cheese:border-slate-600 peer-checked/cheese:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
-              <div class="block">
-                <div class="w-full text-lg font-semibold">Swiss</div>
-              </div>
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="Cheddar" name="cheese" value="Cheddar" class="hidden peer/cheese"/>
-            <label for="Cheddar" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/cheese:border-slate-600 peer-checked/cheese:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
-              <div class="block">
-                <div class="w-full text-lg font-semibold">Cheddar</div>
-              </div>
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="Pepper-jack" name="cheese" value="Pepper-jack" class="hidden peer/cheese"/>
-            <label for="Pepper-jack" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/cheese:border-slate-600 peer-checked/cheese:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
-              <div class="block">
-                <div class="w-full text-lg font-semibold">Pepper Jack</div>
-              </div>
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="Mozarella" name="cheese" value="Mozarella" class="hidden peer/cheese"/>
-            <label for="Mozarella" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/cheese:border-slate-600 peer-checked/cheese:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
-              <div class="block">
-                <div class="w-full text-lg font-semibold">Mozarella</div>
-              </div>
-            </label>
-          </li>
-        </ul>
+        
         
         <strong class="text-4xl py-5">Meats</strong>
-        <ul class="p-5 grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4">
+        <ul class="p-5 grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4 ">
           <li>
-            <input type="checkbox" id="chicken" name="meat" value="chicken" class="hidden peer/meat"/>
-            <label for="chicken" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/meat:border-slate-600 peer-checked/meat:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
+            <input type="checkbox" id="Chicken" name="meat" value="Chicken" class="hidden peer/meat"/>
+            <label for="Chicken" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/meat:border-slate-600 peer-checked/meat:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
               <div class="block">
-                <div class="w-full text-lg font-semibold">Chicken</div>
+                <div class="w-full text-lg font-semibold">Chicken
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden meat">+$0.50</span>
+                </div>
               </div>
             </label>
           </li>
           <li>
-            <input type="checkbox" id="steak" name="meat" value="steak" class="hidden peer/meat"/>
-            <label for="steak" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/meat:border-slate-600 peer-checked/meat:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
+            <input type="checkbox" id="Breaded_Chicken" name="meat" value="Breaded_Chicken" class="hidden peer/meat"/>
+            <label for="Breaded_Chicken" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/meat:border-slate-600 peer-checked/meat:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
               <div class="block">
-                <div class="w-full text-lg font-semibold">Roast Beef</div>
+                <div class="w-full text-lg font-semibold">Breaded Chicken
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden meat">+$0.50</span>
+                </div>
               </div>
             </label>
           </li>
           <li>
-            <input type="checkbox" id="ham" name="meat" value="ham" class="hidden peer/meat"/>
-            <label for="ham" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/meat:border-slate-600 peer-checked/meat:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+            <input type="checkbox" id="Roast_Beef" name="meat" value="Roast_Beef" class="hidden peer/meat"/>
+            <label for="Roast_Beef" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/meat:border-slate-600 peer-checked/meat:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
               <div class="block">
-                <div class="w-full text-lg font-semibold">Ham</div>
+                <div class="w-full text-lg font-semibold">Roast Beef
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden meat">+$0.50</span>
+                </div>
               </div>
             </label>
           </li>
           <li>
+            <input type="checkbox" id="Ham" name="meat" value="Ham" class="hidden peer/meat"/>
+            <label for="Ham" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/meat:border-slate-600 peer-checked/meat:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Ham
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden meat">+$0.50</span>
+                </div>
               </div>
             </label>
           </li>
+          <li>
+            <input type="checkbox" id="Turkey" name="meat" value="Turkey" class="hidden peer/meat"/>
+            <label for="Turkey" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/meat:border-slate-600 peer-checked/meat:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Turkey
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden meat">+$0.50</span>
+                </div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="Salami" name="meat" value="Salami" class="hidden peer/meat"/>
+            <label for="Salami" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/meat:border-slate-600 peer-checked/meat:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Salami
+                  <span class="bg-gray-100 text-gray-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded hidden meat">+$0.50</span>
+                </div>
+              </div>
+            </label>
+          </li>
+          <!-- <li>
+              </div>
+            </label>
+          </li> -->
         </ul>
         <strong class="text-4xl py-5">Veggies</strong>
-        <ul class="p-5 grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4">
+        <ul class="p-5 grid w-full gap-6 sm:grid-cols-2 md:grid-cols-4 ">
           <li>
             <input type="checkbox" id="Lettuce" name="veggie" value="Lettuce" class="hidden peer/veggie"/>
             <label for="Lettuce" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
@@ -235,34 +299,100 @@
             </label>
           </li>
           <li>
-            <input type="checkbox" id="Olives" name="veggie" value="Olives" class="hidden peer/veggie"/>
-            <label for="Olives" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
+            <input type="checkbox" id="Black_Olives" name="veggie" value="Black_Olives" class="hidden peer/veggie"/>
+            <label for="Black_Olives" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100">
               <div class="block">
-                <div class="w-full text-lg font-semibold">Olives</div>
+                <div class="w-full text-lg font-semibold">Black Olives</div>
               </div>
             </label>
           </li>
           <li>
-            <input type="checkbox" id="beans" name="veggie" value="beans" class="hidden peer/veggie"/>
-            <label for="beans" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+            <input type="checkbox" id="Black_Beans" name="veggie" value="Black_Beans" class="hidden peer/veggie"/>
+            <label for="Black_Beans" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
               <div class="block">
-                <div class="w-full text-lg font-semibold">Beans</div>
+                <div class="w-full text-lg font-semibold">Black Beans</div>
               </div>
             </label>
           </li>
           <li>
-            <input type="checkbox" id="broccoli" name="veggie" value="broccoli" class="hidden peer/veggie"/>
-            <label for="broccoli" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+            <input type="checkbox" id="Tomato" name="veggie" value="Tomato" class="hidden peer/veggie"/>
+            <label for="Tomato" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
               <div class="block">
-                <div class="w-full text-lg font-semibold">Broccoli</div>
+                <div class="w-full text-lg font-semibold">Tomato</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="Spinach" name="veggie" value="Spinach" class="hidden peer/veggie"/>
+            <label for="Spinach" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Spinach</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="Onion" name="veggie" value="Onion" class="hidden peer/veggie"/>
+            <label for="Onion" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Onion</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="Chickpea" name="veggie" value="Chickpea" class="hidden peer/veggie"/>
+            <label for="Chickpea" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Chickpea</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="Sweet_Pepper" name="veggie" value="Sweet_Pepper" class="hidden peer/veggie"/>
+            <label for="Sweet_Pepper" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Sweet Pepper</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="Jalapeno_Pepper" name="veggie" value="Jalapeno_Pepper" class="hidden peer/veggie"/>
+            <label for="Jalapeno_Pepper" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Jalapeno Pepper</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="Banana_Pepper" name="veggie" value="Banana_Pepper" class="hidden peer/veggie"/>
+            <label for="Banana_Pepper" class="transition-all inline-flex items-center justify-between w-full p-5 text-slate-500 bg-white border border-slate-200 rounded-lg cursor-pointer peer-checked/veggie:border-slate-600 peer-checked/veggie:text-slate-600 hover:text-slate-600 hover:bg-slate-100" >
+              <div class="block">
+                <div class="w-full text-lg font-semibold">Banana Pepper</div>
               </div>
             </label>
           </li>
         </ul>
-        <button id="submitDeli" type="submit" class="text-white p-15 bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+        <div class="flex flex-row justify-center gap-x-4 mb-8">
+          <div class="bg-white rounded-2xl">
+            <label class="label cursor-pointer">
+              <span class="label-text mx-3 text-xl font-semibold">Grilled?</span>
+              <input type="checkbox" checked="checked" name="grill" class="checkbox mr-1" />
+            </label>
+          </div>
+          <div class="bg-white rounded-2xl">
+            <label class="label cursor-pointer">
+              <span class="label-text mx-3 text-xl font-semibold">Chips?</span>
+              <input type="checkbox" checked="checked" name="chips" class="checkbox mr-1" />
+            </label>
+          </div>
+        </div>
       </form>
     </main>
-    <footer></footer>
+    <div class="footer-spot -translate-y-[3.25rem]"></div>
+    <footer class="h-16 w-full sticky bottom-0 bg-white flex flex-row items-center justify-around ">
+      <h3 class="text-xl font-normal">Price: <span class="font-bold price" id="price">$5.15</span></h3>
+      <button id="submitDeli" type="submit" class="text-white p-15 bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+      <button id="submitDeli" type="submit" class="text-white p-15 ml-24 bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"></button>
+    </footer>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
           const cafClock = document.getElementById('cafclock');
