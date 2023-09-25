@@ -1,17 +1,19 @@
 import $ from 'jquery'
+let order;
 
-let order = {
-    'bread': '',
-    'sauces': [],
-    'cheeses': [],
-    'meats': [],
-    'veggies': [],
-    'grilled': true,
-    'chips': false,
-    'price': 0,
-}
 
 $('#submitDeli').on('click', (e) => {
+    order = {
+        'bread': '',
+        'sauces': [],
+        'cheeses': [],
+        'meats': [],
+        'veggies': [],
+        'grilled': true,
+        'chips': false,
+        'price': 0,
+    }
+    
     order.bread = $("form[name='main'] input[name='bread']:checked").val()
     $("form[name='main'] input[name='sauce']:checked").each((i, item) => {
         order.sauces.push(item.value)
@@ -26,20 +28,25 @@ $('#submitDeli').on('click', (e) => {
         order.veggies.push(item.value)
     })
 
+    order.grilled = document.querySelector("form[name='main'] input[name='grill']").checked
+    order.chips = document.querySelector("form[name='main'] input[name='chips']").checked
+    order.price = calculatePrice()
+
     console.log(order)
 })
 
 function calculatePrice() {
     const form = document.querySelector("form[name='main']")
     let bread = form.querySelector("input[name='bread']:checked")
-    let cheese = form.querySelector("input[name='cheese']:checked")
-    let meat = form.querySelector("input[name='meat']:checked")
+    let cheeseValues = []
+    $("form[name='main'] input[name='cheese']:checked").each((i, item) => {
+        cheeseValues.push(formatItemValue(item.value))
+    })
+    let meatValues = []
+    $("form[name='main'] input[name='meat']:checked").each((i, item) => {
+        meatValues.push(formatItemValue(item.value))
+    })
     let breadValue = bread == null ? '' : formatItemValue(bread.value)
-    let cheeseValue = cheese == null ? '' : formatItemValue(cheese.value)
-    let meatValue = meat == null ? '' : formatItemValue(meat.value)
-
-    console.log(cheeseValue)
-
 
     let price = 0;
 
@@ -48,15 +55,13 @@ function calculatePrice() {
     } else {
         price += 4.15;
     }
-    // let addition = 0;
-    // if(cheeseValue.length > 1) {
-    //     addition = 0.5 * (cheeseValue.length - 1);
-    //     console.log(addition)
-    //     price += addition;
-    // }
-    // if(meatValue.length > 1) {
-    //     price += 0.5 * (meatValue.length - 1);
-    // }
+
+    if(cheeseValues.length > 1) {
+        price += 0.5 * (cheeseValues.length - 1);
+    }
+    if(meatValues.length > 1) {
+        price += 0.5 * (meatValues.length - 1);
+    }
 
     return price;
 }
