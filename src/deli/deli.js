@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 let order = {
     'bread': '',
     'sauces': [],
@@ -6,18 +8,20 @@ let order = {
     'veggies': []
 }
 
-document.getElementById('submitDeli').onclick = (e) => {
-    e.preventDefault()
-    let bread = document.querySelector("form[name='main'] input[name='bread']:checked").value
-    console.log(bread)
-    let sauce = document.querySelector("form[name='main'] input[name='sauce']:checked").value
-    let cheese = document.querySelector("form[name='main'] input[name='cheese']:checked").value
-    let meat = document.querySelector("form[name='main'] input[name='meat']:checked").value
-    let veggie = document.querySelector("form[name='main'] input[name='veggie']:checked").value
-    order.bread = bread
-    order.sauces.push(sauce)
-    order.cheeses.push(cheese)
-    order.meats.push(meat)
-    order.veggies.push(veggie)
+$('#submitDeli').on('click', (e) => {
+    order.bread = $("form[name='main'] input[name='bread']:checked").val()
+    $("form[name='main'] input[name='sauce']:checked").each((i, item) => {
+        order.sauces.push(item.value)
+    })
+    $("form[name='main'] input[name='cheese']:checked").each((i, item) => {
+        order.cheeses.push(item.value)
+    })
+    $("form[name='main'] input[name='meat']:checked").each((i, item) => {
+        order.meats.push(item.value)
+    })
+    $("form[name='main'] input[name='veggie']:checked").each((i, item) => {
+        order.veggies.push(item.value)
+    })
+
     console.log(order)
-}
+})
